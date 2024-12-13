@@ -458,11 +458,17 @@ sumAllTheYears()
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 function searchByTitle(str) {
-  str = movies.filter(film => film.Title)
-  let titoloFilm = movies.map((element)=> element = element.Title.search(str))
- 
+  let film = []
+  for (let i = 0; i < movies.length; i++) {
+    let titolo = movies[i].Title;
+    if (titolo.includes(str)) {
+      film.push(movies[i])
+    }
+    
+  }
+  return film
 }
-searchByTitle("Avengers");
+console.log (searchByTitle("Avengers"))
 
 
 
