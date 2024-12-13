@@ -553,15 +553,32 @@ aggiungi()
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function clearList() {
+  const myList = document.getElementById("myList")
+  myList.innerHTML = ""
+}
+clearList()
+
+
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+function tr() {
+  let colore = document.querySelectorAll("tr")
+colore.forEach(ele => {
+  ele.classList.add('test');
+})}
+tr()
+
+
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
-  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
+  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*"
+   (asterischi) dell'altezza fornita.
 
   Esempio:
   halfTree(3)
@@ -573,7 +590,8 @@ aggiungi()
 */
 
 /* ESERCIZIO 28
-  Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
+  Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" 
+  (asterischi) dell'altezza fornita.
 
   Esempio:
   tree(3)
