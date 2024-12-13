@@ -460,12 +460,8 @@ sumAllTheYears()
 function searchByTitle(str) {
   str = movies.filter(film => film.Title)
   let titoloFilm = movies.map((element)=> element = element.Title.search(str))
- // if(true){
-console.log(titoloFilm)
-//}else{
-  console.log("Nessun film contiene questa parola nel titolo")
+ 
 }
-
 searchByTitle("Avengers");
 
 
