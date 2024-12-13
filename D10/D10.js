@@ -483,19 +483,46 @@ console.log (searchByTitle("Avengers"))
   ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
+function removeIndex(index) {
+  if (index) {
+    return movies.slice(index );
+  } 
+  }
+console.log(removeIndex(1))//da finire
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+function container() {
+  let elemento = document.querySelector("#container")
+  return elemento
+}
+
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+function tag() {
+  let tag = document.querySelectorAll("td")
+  return tag
+}
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+/*function tagTd() {
+  let stampa = document.querySelectorAll("td")
+  stampa.forEach((element,index => {
+    console.log((index + 1) + td.textContent )
+  })
+ }*/ 
+
+
+  
+
+
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
