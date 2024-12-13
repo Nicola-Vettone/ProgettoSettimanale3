@@ -512,17 +512,13 @@ function tag() {
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-/*function tagTd() {
+
+ function tagTd() {
   let stampa = document.querySelectorAll("td")
-  stampa.forEach((element,index => {
-    console.log((index + 1) + td.textContent )
-  })
- }*/ 
-
-
-  
-
-
+  for (element of stampa){
+    console.log(element.innerText)
+  }}
+  //tagTd()
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -534,7 +530,7 @@ colore.forEach(link => {
   colore.style.backgroundColor = 'red'
   return colore
 })}
-bck()
+//bck()
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
@@ -543,11 +539,11 @@ bck()
 function aggiungi() {
   let lista = document.querySelector("#myList")
   let lista1 = document.createElement("li")
-  lista1.textContent = ""
+  lista1.textContent = "Ciao"
   lista.appendChild(lista1)
 
 }
-aggiungi()
+//aggiungi()
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
@@ -557,7 +553,7 @@ function clearList() {
   const myList = document.getElementById("myList")
   myList.innerHTML = ""
 }
-clearList()
+//clearList()
 
 
 
@@ -570,7 +566,7 @@ function tr() {
 colore.forEach(ele => {
   ele.classList.add('test');
 })}
-tr()
+//tr()
 
 
 
@@ -589,6 +585,22 @@ tr()
 
 */
 
+let albero = document.querySelector("#generaAlbero")
+albero.addEventListener('click', () => halfTree(8) )
+
+function halfTree(n) {
+  let mezzoalbero = document.querySelector("#asterisco")
+  for(let i=1; i<=n; i++) {
+    let asterischi = document.createElement('div');
+      asterischi.textContent = "*".repeat(i)
+      mezzoalbero.appendChild(asterischi)
+    }
+    
+  } 
+
+
+
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" 
   (asterischi) dell'altezza fornita.
@@ -600,9 +612,32 @@ tr()
    ***
   *****
 
-*/
+*/ //STESSO CODICE ESERCIZIO 27 E 28,PRATICAMENTE CAMBIO NEL CSS PER FAR COMPARIRE UN MEZZO ALBERO E UN ALBERO INTERO
+
+let albero1 = document.querySelector("#generaAlbero1")
+albero1.addEventListener('click', () => tree(8) )
+
+function tree(n) {
+  let mezzoalbero = document.querySelector("#asterisco1")
+  for(let i=1; i<=n; i++) {
+    let asterischi1 = document.createElement('div');
+      asterischi1.textContent = "*".repeat(i)
+      mezzoalbero.appendChild(asterischi1)
+    }
+    
+  } 
+
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
+function isItPrime(n) {
+  for (let i = 2; i < n; i++) {
+  if (n % i !== 0) {
+    numPrimo = true;
+    return numPrimo
+} else {
+  return false
+}
+} }
+console.log(isItPrime(7))

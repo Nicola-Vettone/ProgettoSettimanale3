@@ -1,0 +1,23 @@
+#asterisco{
+    border: solid 1px rgb(9, 9, 9);
+    display: inline-block;
+    margin-bottom: 0px;
+
+}
+button{
+width: 100px;
+height: 50px;
+display: inline-block;
+
+}
+#asterisco1{
+    text-align: center;
+}
+#generaAlbero1{
+    align-items: center;
+}
+#asterisco1{
+    border: solid 1px rgb(9, 9, 9);
+    display: inline-block
+
+}
