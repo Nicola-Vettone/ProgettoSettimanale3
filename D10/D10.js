@@ -473,10 +473,30 @@ console.log (searchByTitle("Avengers"))
 
 
 /* ESERCIZIO 18
-  Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
+  Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array:
+   "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo,
    mentre "unmatch" deve includere tutti i rimanenti.
 */
+
+function searchAndDivide(str) {
+  let obj = {
+    match: [],
+    unmatch: [],
+  };
+  for (let movie of movies) {
+    if (movie.Title.includes(str)) {
+      obj.match.push(movie);
+    } else {
+      obj.unmatch.push(movie);
+    }
+  }
+
+  return obj;
+}
+const cercaFilm = searchAndDivide("Avengers");
+console.log("Match", cercaFilm.match);
+console.log("Unmatch", cercaFilm.unmatch);
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e 
@@ -586,7 +606,7 @@ colore.forEach(ele => {
 */
 
 let albero = document.querySelector("#generaAlbero")
-albero.addEventListener('click', () => halfTree(8) )
+albero.addEventListener('click', () => halfTree(3) )
 
 function halfTree(n) {
   let mezzoalbero = document.querySelector("#asterisco")
@@ -597,9 +617,6 @@ function halfTree(n) {
     }
     
   } 
-
-
-
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" 
@@ -615,7 +632,7 @@ function halfTree(n) {
 */ //STESSO CODICE ESERCIZIO 27 E 28,PRATICAMENTE CAMBIO NEL CSS PER FAR COMPARIRE UN MEZZO ALBERO E UN ALBERO INTERO
 
 let albero1 = document.querySelector("#generaAlbero1")
-albero1.addEventListener('click', () => tree(8) )
+albero1.addEventListener('click', () => tree(3) )
 
 function tree(n) {
   let mezzoalbero = document.querySelector("#asterisco1")
@@ -640,4 +657,4 @@ function isItPrime(n) {
   return false
 }
 } }
-console.log(isItPrime(7))
+console.log(isItPrime(3))
