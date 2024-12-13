@@ -528,13 +528,31 @@ function tag() {
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+function bck() {
+  let colore = document.querySelectorAll("a")
+colore.forEach(link => {
+  colore.style.backgroundColor = 'red'
+  return colore
+})}
+bck()
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+function aggiungi() {
+  let lista = document.querySelector("#myList")
+  let lista1 = document.createElement("li")
+  lista1.textContent = ""
+  lista.appendChild(lista1)
+
+}
+aggiungi()
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
